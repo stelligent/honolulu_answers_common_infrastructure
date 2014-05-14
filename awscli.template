@@ -93,6 +93,9 @@
         "UserData" : { "Fn::Base64" : { "Fn::Join" : ["", [
           "#!/bin/bash -v\n",
 
+          "# Update Yum\n",
+          "yum -y update\n",
+
           "# Remove Ruby 1.8.7\n",
           "yum erase -y ruby rubygems\n",
 
